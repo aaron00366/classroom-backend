@@ -29,7 +29,7 @@ app.use(express.json());
 app.use('/api/subjects', subjectRouter);
 
 app.get('/', (_req, res) => {
-    res.send('Hello World!');
+    res.send('Hello World!!');
 });
 
 app.listen(PORT, () => {
