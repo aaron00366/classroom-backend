@@ -1,4 +1,6 @@
-import 'dotenv/config';
+import AgentAPI from 'apminsight';
+AgentAPI.config()
+
 import express from 'express';
 import subjectRouter from './routes/subjects';
 import cors from 'cors';
