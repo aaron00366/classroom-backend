@@ -5,7 +5,7 @@ import express from 'express';
 import subjectRouter from './routes/subjects.js';
 import cors from 'cors';
 import { toNodeHandler } from 'better-auth/node'
-import { auth } from './lib/auth'
+import { auth } from './lib/auth.js'
 
 const app = express();
 const PORT = 8000;
