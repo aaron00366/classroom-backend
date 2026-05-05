@@ -3,6 +3,8 @@ AgentAPI.config()
 
 import express from 'express';
 import subjectRouter from './routes/subjects.js';
+import userRouter from './routes/users.js';
+import classesRouter from './routes/classes.js'
 import cors from 'cors';
 import { toNodeHandler } from 'better-auth/node'
 import { auth } from './lib/auth.js'
@@ -27,7 +29,8 @@ app.all('/api/auth/{*splat}', toNodeHandler(auth));
 app.use(express.json());
 
 app.use('/api/subjects', subjectRouter);
-
+app.use('/api/users', userRouter);
+app.use('/api/classes', classesRouter)
 app.get('/', (_req, res) => {
     res.send('Hello World!!');
 });
